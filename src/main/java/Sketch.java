@@ -23,10 +23,10 @@ public class Sketch {
     new Item(18871, 69), 
     new Item(19967, 45)
   };  
-                             
+
   public int linearSearch(int catNumToFind){
     for (int i = 0; i < store.length; i++) {
-      if (store[i].getCatNum.getCatNum() == catNumToFind) return store[i].getInventory();
+      if (store[i].getCatNum() == catNumToFind) return store[i].getInventory();
     }
     return -1;
   }
@@ -38,7 +38,7 @@ public class Sketch {
   }
 
   public int binarySearch(int catNumToFind){
-    int low = 0; high = store.length-1;
+    int low = 0, high = store.length-1;
     while (low <= high) {
       int guess = (low + high)/2;
       if (store[guess].getCatNum() == catNumToFind) return store[guess].getInventory();
